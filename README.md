@@ -1,5 +1,9 @@
 # Golang NIDA Tanzania Wrapper
 
+```
+go get github.com/charity1475/nida
+```
+
 ``` go
 
 func main() {
@@ -8,3 +12,5 @@ func main() {
 	fmt.Printf("%+v\n", user)
 }
 ```
+
+
