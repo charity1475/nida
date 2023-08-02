@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/charity1475/nida/nida"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -36,9 +37,9 @@ func TestCardGet(t *testing.T) {
 			}))
 			defer server.Close()
 
-			BaseUrl = server.URL
+			nida.BaseUrl = server.URL
 
-			card := &Card{Number: tc.cardNumber}
+			card := &nida.Card{Number: tc.cardNumber}
 			response := card.Get()
 
 			if response != tc.expectedResponse {
